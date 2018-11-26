@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy,Input } from '@angular/core';
+
 
 
 @Component({
   selector:'app-pres',
   templateUrl:'./presentation.component.html',
-  styleUrls:[]
+  styleUrls:[],
+  changeDetection:ChangeDetectionStrategy.OnPush
 
 })
-export class PresentationComponent {
+export class PresentationComponent{
+
+  @Input() post;
+
+
+
+
 
 }
