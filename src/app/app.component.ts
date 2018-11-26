@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs/Observable';
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,7 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  data ='my name is alok';
+  data:Observable;
+  constructor(private http:HttpClient){
+
+  }
+
+  onClick(){
+    this.data =this.http.get('https://jsonplaceholder.typicode.com/posts');
+  }
+
 
 
 
