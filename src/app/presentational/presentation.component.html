@@ -1,4 +1,12 @@
 
-<div *ngFor='let data of post'>
-<h1>{{data.id}}</h1>
+<div *ngFor='let data of post|async'>
+  <table>
+    <tr>
+      <td>{{data.id}}</td>
+      <td>{{data.userId}}</td>
+      <td>{{data.title}}</td>
+      <td>{{data.body}}</td>
+    </tr>
+  </table>
+
 </div>
